@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
-import { Observable, map, tap } from 'rxjs';
-import { environments } from 'src/environments/environments';
+import { Observable, catchError, map, tap, throwError } from 'rxjs';
+import { environment } from 'src/environments/environments';
 import { User, AuthStatus, LoginResponse } from '../interfaces';
 
 @Injectable({
@@ -10,7 +10,7 @@ import { User, AuthStatus, LoginResponse } from '../interfaces';
 export class AuthService {
 
   //*readonly es una propiedad que nos permite hacer que el no pueda ser modificado ni usando el mismo servicio
-  private readonly baseUrl: string = environments.baseUrl;
+  private readonly baseUrl: string = environment.baseUrl;
   private http = inject(HttpClient);
 
   private _currentUser = signal<User|null>(null);
@@ -37,7 +37,10 @@ export class AuthService {
         localStorage.setItem('token', token);
       }),
 
-      map( () => true )
+      map( () => true ),
+
+      //todo: errores
+      catchError( err => throwError ( () => err.error.message ) )
 
     );
 
