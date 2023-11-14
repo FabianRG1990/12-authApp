@@ -1,6 +1,5 @@
-# AuthApp-
+# AuthApp
 
-pruebas de pull request
 
 ## descripcion:
 <p>
@@ -14,24 +13,25 @@ Esta app esta enfocada en la expariencia de usuario en el login
 
 ### temas vistos en esta app:
 <p>
-1.archivos de barril
+1. archivos de barril
 
-2.manejo de errores
+2. manejo de errores
 
-3.signals
+3. signals
 
-4.funciones guards
+4. funciones guards
 
-5.CORS
+5. CORS
 
-6.DRY
+6. DRY
 
-7.logout
+7. logout
 
-8.Raccionar a los cambios de autentificacion
+8. Raccionar a los cambios de autentificacion
 
-9.Servicio de verficacion de token
+9. Servicio de verficacion de token
 
+10. pruebas de pull request
 </p>
 
 
