@@ -34,6 +34,16 @@ Esta app esta enfocada en la expariencia de usuario en el login
 10. pruebas de pull request
 </p>
 
+## Paginas usadas
+
+<p>
+https://railway.app/
+
+https://www.mongodb.com/atlas
+
+
+</p>
+
 
 
 ## Acceso al proyecto:
